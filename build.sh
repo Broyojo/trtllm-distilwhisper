@@ -1,0 +1,11 @@
+python3 build.py --model_dir hf_model \
+                 --dtype float16 \
+                 --max_batch_size 64 \
+                 --max_input_len 14 \
+                 --max_output_len 100 \
+                 --max_beam_width 1 \
+                 --use_gpt_attention_plugin float16 \
+                 --use_bert_attention_plugin float16 \
+                 --use_gemm_plugin float16 \
+                 --output_dir trtllm_engine \
+                 --enable_context_fmha
